@@ -585,57 +585,72 @@ h1, h2, h3, h4 {
   100% { opacity: 0; transform: translateY(14px); }
 }
 
+
 /* ============ 7. ABOUT ============ */
+
 .about-grid {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: var(--space-16);
-  align-items: center;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: var(--space-16);
+    align-items: center;
 }
 
 .about-media {
-  position: relative;
+    position: relative;
+    min-width: 0;
 }
 
 .about-photo {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Ta photo personnelle */
+.about-profile-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .about-badge {
-  position: absolute;
-  bottom: -18px;
-  right: -18px;
-  background: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-4) var(--space-6);
-  box-shadow: var(--shadow-md);
-  display: flex;
-  flex-direction: column;
+    position: absolute;
+    bottom: -18px;
+    right: -18px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-6);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
 }
 
 .badge-number {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  font-family: var(--font-mono);
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    font-family: var(--font-mono);
 }
 
 .badge-text {
-  font-size: 0.78rem;
-  color: var(--color-text-secondary);
+    font-size: 0.78rem;
+    color: var(--color-text-secondary);
 }
 
 .about-text {
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-4);
-  font-size: 1.02rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-4);
+    font-size: 1.02rem;
 }
 
-.about-text strong { color: var(--color-text); }
-
+.about-text strong {
+    color: var(--color-text);
+}
 .about-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
